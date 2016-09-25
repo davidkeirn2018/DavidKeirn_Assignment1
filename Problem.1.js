@@ -3,8 +3,7 @@
  */
 console.log("Hello World");
 
-for (var x=1; x <= 100; x++)
-{
+for (var x=1; x <= 100; x++) {
     if (x % 15 == 0)
         console.log("FizzBuzz");
     else if (x % 3 == 0)
@@ -14,10 +13,13 @@ for (var x=1; x <= 100; x++)
     else
         console.log(x);
 
-
+}
+{
     var fs = require("fs");
     var readMe = fs.readFileSync('Assignment1_names-1.txt', 'utf8');
-    console.log(readMe);
+    var textByLine = readMe.split(',')
+    //textByLine.sort();
+    console.log(textByLine.sort());
 
 
     /* Everything below here works.. kinda'
