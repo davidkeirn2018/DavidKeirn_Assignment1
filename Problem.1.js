@@ -27,3 +27,25 @@ for (var x=1; x <= 100; x++) {
 
 };
 
+{
+    var primes = [2];
+    var i = 3;
+    var j = 2;
+    var maximumPrimes = 10001;
+
+    while (primes.length < maximumPrimes) {
+
+        while (i % j !== 0) {
+            j++;
+
+            if (j === i) {
+                primes.push(i);
+                break;
+            }
+        }
+
+        i++;
+        j = 2;
+    }
+    console.log(primes);
+}
